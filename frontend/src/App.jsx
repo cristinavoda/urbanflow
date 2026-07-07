@@ -13,7 +13,9 @@ function App() {
       {isLoggedIn ? (
         <DashboardPage />
       ) : (
-        <button onClick={() => setIsLoggedIn(true)}>Log In</button>
+        <button onClick={() => setIsLoggedIn(true)} className="login-btn">
+          Log In
+        </button>
       )}
     </div>
   )

@@ -11,7 +11,50 @@ body {
     background: #f8fafc;
     color: #1f2937;
 }
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f8fafc;
+}
+.login-form {
+    
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, .05);
+    width: 100%;
+    max-width: 400px;
+}
+.login-btn {
+    align-items: center;
+    margin: 10px auto 0;
+    margin-left: 15rem;
 
+    margin-top: 10rem;
+   
+    padding: 0.75rem 1.5rem;
+
+    width: fit-content;
+    
+    background: #1f2937;
+    color: white;
+    border: none;
+    border-bottom: 8px solid #000;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all .2s ease;
+    
+}
+gin-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, .05);
+    width: 100%;
+    max-width: 400px;
+}
 
 
 .dashboard-layout {
