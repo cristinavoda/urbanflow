@@ -1,6 +1,7 @@
 <?php
-
+use Core\Response;
 require_once __DIR__ . '/../core/Response.php';
+
 
 class Database
 {
@@ -11,12 +12,23 @@ class Database
 
     public function __construct()
     {
-        $this->host = $_ENV['DB_HOST'] ?? 'localhost';
-        $this->database = $_ENV['DB_NAME'] ?? 'urbanflow';
-        $this->username = $_ENV['DB_USER'] ?? 'root';
-        $this->password = $_ENV['DB_PASSWORD'] ?? '';
-    }
+     
+         if ($_SERVER['SERVER_NAME'] === 'localhost') {
 
+            $this->host = 'localhost';
+            $this->database = 'urbanflow';
+            $this->username = 'root';
+            $this->password = '';
+
+        } else {
+
+            $this->host = 'sql202.infinityfree.com';
+            $this->database = 'if0_42357728_urbanflow';
+            $this->username = 'if0_42357728';
+            $this->password = '...';
+
+        }
+    }
     public function getConnection(): PDO
     {
         try {
