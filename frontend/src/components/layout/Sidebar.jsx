@@ -2,8 +2,11 @@ import {
     LayoutDashboard,
     TriangleAlert,
     Map,
-    Settings
+    Settings,
+    Package,
 } from 'lucide-react';
+
+import { NavLink } from 'react-router-dom';
 
 function Sidebar() {
     return (
@@ -15,26 +18,35 @@ function Sidebar() {
 
             <nav className="sidebar-nav">
 
-                <a href="#" className="active">
-                    <LayoutDashboard size={20} />
-                    <span>Dashboard</span>
-                </a>
+            <NavLink to="/">
+    <LayoutDashboard size={20} />
+    <span>Dashboard</span>
+</NavLink>
 
-                <a href="#">
+
+             <NavLink to="/incidents"
+              className={({ isActive }) => isActive ? "active" : ""}>
                     <TriangleAlert size={20} />
                     <span>Incidents</span>
-                </a>
+                </NavLink>
+                
+             <NavLink to="/materials"
+              className={({ isActive }) => isActive ? "active" : ""}>
+    <Package size={20} />
+    <span>Materials</span>
+</NavLink>
 
-                <a href="#">
-                    <Map size={20} />
-                    <span>Map</span>
-                </a>
+              <NavLink to="/map"
+               className={({ isActive }) => isActive ? "active" : ""}>
+    <Map size={20} />
+    <span>Map</span>
+</NavLink>
 
-                <a href="#">
-                    <Settings size={20} />
-                    <span>Settings</span>
-                </a>
-
+          <NavLink to="/settings"
+           className={({ isActive }) => isActive ? "active" : ""}>
+    <Settings size={20} />
+    <span>Settings</span>
+</NavLink>     
             </nav>
 
         </aside>

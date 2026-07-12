@@ -8,7 +8,7 @@ function KPIs() {
 
             <KpiCard
                 title="Incidents"
-                value="20"
+                value="10"
                 color="#2563EB"
             />
 

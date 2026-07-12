@@ -1,8 +1,5 @@
-import { useState } from 'react'
-
-import DashboardPage from './pages/DashboardPage'
-
-
+import { useState } from 'react';
+import AppRoutes from './routes/AppRoutes';
 import './styles/App.css'
 
 function App() {
@@ -11,7 +8,7 @@ function App() {
   return (
     <div className="App">
       {isLoggedIn ? (
-        <DashboardPage />
+         <AppRoutes />
       ) : (
         <button onClick={() => setIsLoggedIn(true)} className="login-btn">
           Log In
