@@ -1,0 +1,71 @@
+.material-search{
+margin-top: 2rem;
+    margin-bottom:2rem;
+
+}
+
+.material-search input{
+
+    width:100%;
+
+    max-width:420px;
+
+    padding:14px 18px;
+
+    border:1px solid #d1d5db;
+
+    border-radius:12px;
+
+    font-size:1rem;
+
+    background:white;
+
+    transition:.2s;
+
+}
+
+.material-search input:focus{
+
+    outline:none;
+
+    border-color:#2563eb;
+
+    box-shadow:0 0 0 4px rgba(37,99,235,.12);
+
+}
+.empty-state{
+
+    margin-top:2rem;
+
+    padding:3rem;
+
+    text-align:center;
+
+    background:white;
+
+    border-radius:18px;
+
+    color:#6b7280;
+
+    box-shadow:0 4px 15px rgba(0,0,0,.05);
+
+}
+.materials-toolbar{
+
+    display:flex;
+    flex-direction: column;
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:2rem;
+
+}
+
+.results-count{
+    padding: 1rem ;
+    color:#6b7280;
+
+    font-weight:600;
+
+}

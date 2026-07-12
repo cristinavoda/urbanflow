@@ -1,5 +1,9 @@
-export default function MaterialsTable({ materials }) {
-
+export default function MaterialsTable({ materials, search = '' }) {
+const filteredMaterials = materials.filter(material =>
+    material.name.toLowerCase().includes(search.toLowerCase()) ||
+    material.category.toLowerCase().includes(search.toLowerCase()) ||
+    material.supplier.toLowerCase().includes(search.toLowerCase())
+)
     return (
 
         <table>
@@ -24,7 +28,7 @@ export default function MaterialsTable({ materials }) {
 
             <tbody>
 
-                {materials.map(material => (
+                {filteredMaterials.map(material => (
 
                     <tr key={material.id}>
 
