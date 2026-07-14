@@ -25,7 +25,7 @@ class Database
             $this->host = 'sql202.infinityfree.com';
             $this->database = 'if0_42357728_urbanflow';
             $this->username = 'if0_42357728';
-            $this->password = '...';
+            $this->password = 'mR101dN3BUiv0';
 
         }
     }
