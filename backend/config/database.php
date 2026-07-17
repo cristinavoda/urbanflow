@@ -18,7 +18,7 @@ class Database
             $this->host = 'localhost';
             $this->database = 'urbanflow';
             $this->username = 'root';
-            $this->password = '';
+            $this->password = 'mR101dN3BUiv0';
 
         } else {
 
