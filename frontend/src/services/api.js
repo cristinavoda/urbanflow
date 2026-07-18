@@ -1,8 +1,7 @@
-import axios from 'axios'
+import axios from "axios";
 
-console.log("API:", import.meta.env.VITE_API_URL)
 const api = axios.create({
-    baseURL: import.meta.env.VITE_API_URL
-})
+  baseURL: "https://urbanflow.freepage.cc/backend/index.php?route="
+});
 
-export default api
+export default api;
