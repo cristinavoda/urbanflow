@@ -4,7 +4,7 @@ $allowedOrigins = [
     'http://localhost:5173',
     'http://localhost:5174',
     'https://urbanflow3.netlify.app',
-    'https://incandescent-sawine-798d34.netlify.app'
+    
 ];
 
 if (
