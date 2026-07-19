@@ -22,12 +22,12 @@ class Database
 
         } else {
 
-            $this->host = 'sql202.infinityfree.com';
-            $this->database = 'if0_42357728_urbanflow';
-            $this->username = 'if0_42357728';
-            $this->password = 'mR101dN3BUiv0';
+        $this->host = getenv('DB_HOST');
+        $this->database = getenv('DB_NAME');
+        $this->username = getenv('DB_USER');
+        $this->password = getenv('DB_PASSWORD');
 
-        }
+    }
     }
     public function getConnection(): PDO
     {
