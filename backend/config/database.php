@@ -13,21 +13,23 @@ class Database
     public function __construct()
     {
      
-         if ($_SERVER['SERVER_NAME'] === 'localhost') {
+     if (
+    $_SERVER['SERVER_NAME'] === 'localhost' ||
+    $_SERVER['SERVER_NAME'] === '127.0.0.1'
+) {
 
-            $this->host = 'localhost';
-            $this->database = 'urbanflow';
-            $this->username = 'root';
-            $this->password = '';
+    $this->host = 'localhost';
+    $this->database = 'urbanflow';
+    $this->username = 'root';
+    $this->password = '';
 
-        } else {
+} else {
 
-        $this->host = getenv('DB_HOST');
-        $this->database = getenv('DB_NAME');
-        $this->username = getenv('DB_USER');
-        $this->password = getenv('DB_PASSWORD');
-
-    }
+    $this->host = getenv('DB_HOST');
+    $this->database = getenv('DB_NAME');
+    $this->username = getenv('DB_USER');
+    $this->password = getenv('DB_PASSWORD');
+}    
     }
     public function getConnection(): PDO
     {
