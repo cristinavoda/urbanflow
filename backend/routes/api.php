@@ -14,5 +14,5 @@ $router->get('/api/incidents/show',[IncidentController::class, 'show']);
 $router->post('/api/incidents', [IncidentController::class, 'store']);
 $router->get('/api/materiales', [MaterialController::class, 'index']);
 $router->get('/api/materiales/show',[MaterialController::class, 'show']);
-$router->get('/api/materials/low-stock',[MaterialController::class, 'lowStock']);
+$router->get('/api/materiales/low-stock',[MaterialController::class, 'lowStock']);
 $router->post('/api/materiales', [MaterialController::class, 'store']);

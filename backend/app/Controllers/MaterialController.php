@@ -17,14 +17,13 @@ class MaterialController
     }
 
 
-    
-    public function show()
+ public function show(): void
 {
     $id = (int) ($_GET['id'] ?? 0);
 
     $material = new Material();
 
-    echo json_encode(
+    Response::json(
         $material->find($id)
     );
 }
@@ -43,15 +42,13 @@ public function store()
 {
     $data = json_decode(file_get_contents('php://input'), true);
 
-    $incident = new Material();
+    $material = new Material();
 
     $material->create($data);
 
-    header('Content-Type: application/json');
-
-    echo json_encode([
+    Response::json([
         'status' => 'success',
-        'message' => 'Incidencia creada correctamente'
+        'message' => 'Material creado correctamente'
     ]);
 }
 
