@@ -8,7 +8,15 @@ class Response
     {
         http_response_code($status);
 
-        header('Content-Type: application/json');
+        if (isset($_SERVER['HTTP_ORIGIN'])) {
+            header('Access-Control-Allow-Origin: ' . $_SERVER['HTTP_ORIGIN']);
+        } else {
+            header('Access-Control-Allow-Origin: *');
+        }
+
+        header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS');
+        header('Access-Control-Allow-Headers: Content-Type, Authorization');
+        header('Content-Type: application/json; charset=UTF-8');
 
         echo json_encode(
             $data,
@@ -17,4 +25,4 @@ class Response
 
         exit;
     }
-}       
+}
