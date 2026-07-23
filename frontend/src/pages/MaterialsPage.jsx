@@ -9,6 +9,12 @@ export default function MaterialsPage() {
     const [materials, setMaterials] = useState([])
     const [search, setSearch] = useState('')
 
+    // Fallback loader for local materials when API is unavailable
+    const getMaterials = async () => {
+        // Return an empty array or provide sample local materials
+        return []
+    }
+
     useEffect(() => {
 
         const fetchMaterials = async () => {
@@ -21,7 +27,11 @@ export default function MaterialsPage() {
 
             } catch (error) {
 
-                console.error(error)
+                console.warn("API no disponible. Cargando materiales locales...", error);
+
+    const data = await getMaterials();
+
+    setMaterials(data);
 
             }
 
